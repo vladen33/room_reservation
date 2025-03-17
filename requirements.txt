@@ -1,6 +1,8 @@
-fastapi
+fastapi~=0.115.11
 uvicorn[standard]
-pydantic-settings
+pydantic-settings~=2.8.1
 aiosqlite
-sqlalchemy
-alembic
+sqlalchemy~=2.0.39
+alembic~=1.15.1
+
+python-dotenv~=1.0.1
