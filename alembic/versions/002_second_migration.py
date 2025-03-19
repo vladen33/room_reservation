@@ -1,8 +1,8 @@
-"""Add description to MeetingRoom
+"""Second migration
 
-Revision ID: 436e3674de46
-Revises: 5c4f3f2de0bb
-Create Date: 2025-03-17 22:28:46.392910
+Revision ID: 002
+Revises: 001
+Create Date: 2025-03-19 21:54:18.640953
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '436e3674de46'
-down_revision: Union[str, None] = '5c4f3f2de0bb'
+revision: str = '002'
+down_revision: Union[str, None] = '001'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
