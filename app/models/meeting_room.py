@@ -12,4 +12,4 @@ class MeetingRoom(Base):
     # уникальным и непустым.
     name = Column(String(100), unique=True, nullable=False)
     description = Column(Text)
-    size = Column(Integer)
+    # size = Column(Integer)
