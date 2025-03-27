@@ -13,12 +13,11 @@ from app.schemas.reservation import ReservationCreate, ReservationDB, Reservatio
 router = APIRouter()
 
 
-@router.post('/', response_model=ReservationDB)
+@router.post('/') #, response_model=ReservationDB)
 async def create_reservation(
         reservation: ReservationCreate,
         session: AsyncSession = Depends(get_async_session)
 ):
-
     await check_meeting_room_exists(
         reservation.meetingroom_id, session
     )
@@ -27,8 +26,8 @@ async def create_reservation(
         # аргументы должны быть переданы с указанием ключей.
         **reservation.dict(), session=session
     )
-    new_reservation = reservation_crud.create(reservation, session)
-    return new_reservation
+    # new_reservation = reservation_crud.create(reservation, session)
+    return reservation # new_reservation
 
 
 @router.get('/', response_model=list[ReservationDB])
